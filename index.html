@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://apis.google.com/js/api.js" defer></script>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+
+  
+    <!-- Include EmailJS SDK -->
+    <script defer src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"> </script>
+    <script>
+      
+
+        document.addEventListener('DOMContentLoaded', function () {
+            emailjs.init('fk6h5h0BetU3aqChR'); // Initialize EmailJS
+        });
+    </script>
+    <script src="index.js" defer></script>
+    </head>
+<body>
+    <header>
+        <h1>Hotel<br>Nigeria</h1>
+    
+        <!-- Navbar Toggle Button -->
+        <div id="navbar-toggle" class="menu-icon">
+            <i class='bx bx-menu'></i> <!-- Menu icon -->
+           
+        </div>
+    
+        <ul id="navbar-menu">
+            
+            <a href="index.html"> <li>Home</li> </a>
+            <a href="#home"> <li>Gallery</li> </a>
+            <a href="#booking"> <li>Book a room</li> </a>
+            <div class="search-bar">
+                <input type="text" id="search" placeholder="Search by hotel name">
+                <button onclick="searchHotels()"><i class='bx bx-search-alt-2'></i></button>
+            </div>
+        </ul>
+    
+        
+    </header>
+    
+
+    <section id="landing">
+        <h1 id="greeting">Discover Your Perfect Stay</h1>
+        <p id="description">Book Your Dream Hotel Today!</p>
+        <a href="#hotel-list">Explore</a>
+    </section>
+
+
+<section id="why">
+<div class="abt">
+    <h1>About Hotel Nigeria</h1>
+    <p> At Hotel Nigeria, we simplify hotel reservations with a wide selection of top accommodations. Our user-friendly platform and dedicated support ensure you find and book your perfect stay effortlessly.</p>
+</div>
+
+<img src="img/hotel2.jpg" alt="">
+</section>
+    <section id="home">
+       
+        <div class="filters">
+            <label for="amenities">Filter by Amenities:</label>
+            <select id="amenities">
+                <option value="">All</option>
+                <option value="wi-fi">Wi-Fi</option>
+                <option value="pool">Pool</option>
+                <option value="gym">Gym</option>
+                <option value="apartment">Apartments</option>
+                <option value="Restaurant">Restaurant</option>
+            </select>
+            <button onclick="filterHotels()"><small>filter</small></button>
+        </div>
+        <div id="hotel-list">
+            
+            <!-- Hotel cards will be dynamically populated -->
+        </div>
+        <div id="pagination">
+            <!-- Pagination buttons will be dynamically populated -->
+        </div>
+    </section>
+    <section id="booking">
+        <h2>Book Your Stay</h2>
+        <form id="booking-form" >
+            <label for="hotel-name">Hotel Name:</label>
+            <input type="text" id="hotel" placeholder="Enter hotel name" required>
+            
+            <label for="check-in">Check-In Date:</label>
+            <input type="date" id="checkin" required>
+            
+            <label for="check-out">Check-Out Date:</label>
+            <input type="date" id="checkout" required>
+
+            <label for="phone-number">Phone Number:</label>
+            <input type="text" id="phonenumber" required>
+            <label for="phone-number">full name:</label>
+            <input type="text" id="name" required>
+            
+            <button type="submit" onclick="collectdata(event)">Submit Booking</button>
+        </form>
+    </section>
+    <!-- Modal -->
+<div id="booking-modal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <h3>Confirm Your Booking</h3>
+        <p><b>Name:</b> <span id="modal-name"></span></p>
+        <p><b>Hotel:</b> <span id="modal-hotel"></span></p>
+        <p><b>Check-In:</b> <span id="modal-checkin"></span></p>
+        <p><b>Check-Out:</b> <span id="modal-checkout"></span></p>
+        <p><b>Phone Number:</b> <span id="modal-phone"></span></p>
+        <button id="confirm-booking" style="font-size: 15px;" onclick="sendMail()">Confirm Booking</button>
+        <button id="close-modal" style="font-size: 15px;">Cancel</button>
+    </div>
+</div>
+
+    <footer>
+        <p>&copy; 2024 Hotel Booking Portal. All rights reserved.</p>
+        <p>contact us through</p>
+<div class="soc">
+    
+    
+    <div><i class='bx bxl-whatsapp' ></i>09057448393</div>
+    <div><i class='bx bxl-gmail' ></i>hbooking234@gmail.com</div>
+</div>
+    </footer>
+  
+
+
+  
+    
+
+
+</body>
+</html>

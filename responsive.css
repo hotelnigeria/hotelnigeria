@@ -1,0 +1,214 @@
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    /* For tablets and smaller devices */
+
+    /* header {
+        /* flex-direction: column; */
+        /* padding-left: 23px; */
+        /* padding-right: 23px; */
+        /* justify-content: space-between; */
+        /* align-items: center; */
+    /* } */ 
+    #navbar-menu {
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #000;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        display: none;
+    }
+
+    #navbar-menu.show {
+        display: block;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    /* .search-bar {
+        display: none;
+    } */
+
+    header ul {
+        gap: 10px;
+        padding: 0;
+    }
+
+    header ul a {
+        font-size: 16px;
+    }
+
+    .search-bar {
+        margin-top: 10px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    #landing h1 {
+        font-size: 35px;
+        text-align: center;
+    }
+
+    #landing p {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    #landing a {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+
+    #why {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+        margin-top: 20px;
+    }
+
+    #why .abt {
+        width: 100%;
+        /* margin-bottom: 20px; */
+        padding: 23px;
+    }
+    #why .abt p{
+        font-size: 14px;
+        font-weight: 200;
+    }
+
+    #why img {
+        width: 100%;
+        height: auto;
+    }
+
+    .filters {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    #hotel-list {
+        flex-direction: column;
+    }
+
+    .hotel-card {
+        width: 100%;
+    }
+
+    .hotel-card img {
+        height: 150px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+
+    #pagination {
+        flex-wrap: wrap;
+    }
+
+    #pagination button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    #booking form label,
+    #booking form input,
+    #booking form button {
+        width: 100%;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* For mobile devices */
+
+    /* header { */
+        /* flex-direction: column; */
+        /* align-items: center; */
+        /* padding: 10px 0; */
+    /* } */
+
+    header h1 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    header ul {
+       
+        gap: 5px;
+    }
+    header ul a li{
+        font-size: 15px;
+    }
+
+    .search-bar {
+       
+        align-items: center;
+        gap: 10px;
+    }
+
+    #landing h1 {
+        font-size: 40px;
+    }
+
+    #landing p {
+        font-size: 12px;
+    }
+
+    #landing a {
+        font-size: 12px;
+        padding: 6px 15px;
+    }
+
+    #why .abt {
+        width: 100%;
+        padding: 10px;
+    }
+
+    #why img {
+        width: 100%;
+        height: auto;
+    }
+
+    .filters {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .filters input,
+    .filters select,
+    .filters button {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    .hotel-card img {
+        height: 120px;
+    }
+
+    .hotel-card .info p {
+        font-size: 10px;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+
+    #pagination button {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    #booking form label,
+    #booking form input,
+    #booking form button {
+        width: 100%;
+        font-size: 12px;
+    }
+}
