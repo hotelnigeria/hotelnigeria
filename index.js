@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             navbarMenu.classList.remove("hide");
             navbarMenu.classList.add("show");
-            toggleButton.innerHTML = "<i class='bx bx-x' style='color:white'></i>"; // Change to close icon
+            toggleButton.innerHTML = "<i class='bx bx-x' style='color:black'></i>"; // Change to close icon
         }
     });
 });
